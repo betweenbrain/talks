@@ -1,30 +1,21 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
-
 	<title>Achieving Responsiveness</title>
-
-	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-	<meta name="author" content="Hakim El Hattab">
-
+	<meta name="description" content="An introduction to Responsive Web Design and its implementation">
+	<meta name="author" content="Matt Thomas">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/theme/betweenbrain.css">
-
 	<!-- For syntax highlighting -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
-
 	<script>
-		// If the query includes 'print-pdf' we'll use the PDF print sheet
-		document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+	// If the query includes 'print-pdf' we'll use the PDF print sheet
+	document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
 	</script>
-
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
 	<![endif]-->
@@ -39,58 +30,49 @@
 
 <!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
-<section>
-	<h1>Achieving Responsiveness</h1>
-	<img id="logo" class="clean" src="images/logo.png" />
-	<a rel="author" href="https://twitter.com/betweenbrain">Matt Thomas</a>
-	<cite><a href="http://betweenbrain.com/talks/achieving-responsiveness">betweenbrain.com/talks/achieving-responsiveness</a></cite>
-
-</section>
+	<section>
+		<h1>Achieving Responsiveness</h1>
+		<img id="logo" class="clean" src="images/logo.png" />
+		<a rel="author" href="https://twitter.com/betweenbrain">Matt Thomas</a>
+		<cite><a href="http://betweenbrain.com/talks/achieving-responsiveness">betweenbrain.com/talks/achieving-responsiveness</a></cite>
+	</section>
 
 <section>
 	<h2>Responsive Web Design</h2>
-
 	<q>an approach [where] a site is crafted to provide an optimal viewing experience across a wide range of devices</q>
-	<cite><a href="http://en.wikipedia.org/wiki/Responsive_Web_Design ">wikipedia.org/wiki/Responsive_Web_Design</a></cite>
-
-	<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-	</aside>
+	<cite>Wikipedia: <a href="http://en.wikipedia.org/wiki/Responsive_Web_Design ">Responsive Web Design</a></cite>
 </section>
-
 
 <section>
 	<h2>Key Elements</h2>
 	<ul>
-		<li class="fragment">Media Queries</li>
-		<li class="fragment">Fluid Grid</li>
-		<li class="fragment">Flexible Images
-			<ul>
-				<li class="fragment">[objects too!]</li>
-			</ul>
-		</li>
+	<li class="fragment">Media Queries</li>
+	<li class="fragment">Fluid Grid</li>
+	<li class="fragment">Flexible Images
+		<ul>
+			<li class="fragment">[objects too!]</li>
+		</ul>
+	</li>
 	</ul>
 </section>
 
-	<section>
+<section>
 	<section>
 		<h2>Media Queries</h2>
+
 		<p class="fragment">
-		<q>consists of a media type and zero or more expressions that check for the conditions of particular <a href="http://dev.w3.org/csswg/css3-mediaqueries/#media1">media features</a>.</q>
-		<cite><a href="http://dev.w3.org/csswg/css3-mediaqueries/#abstract">http://dev.w3.org/csswg/css3-mediaqueries/#abstract</a></cite>
+			<q>consists of a media type and zero or more expressions that check for the conditions of particular
+				<a href="http://dev.w3.org/csswg/css3-mediaqueries/#media1">media features</a>.</q>
+			<cite>W3C: <a href="http://dev.w3.org/csswg/css3-mediaqueries/#abstract">Media Queries</a></cite>
 		</p>
-		</section>
+	</section>
 	<section>
 		<h2>For Example</h2>
-			<pre><code contenteditable>/* Default styles for small screens */
+<pre class="fragment"><code contenteditable>/* Default styles for small screens */
 
-body {
-  font-size : 76%;
-}
+body { font-size : 76%; }
 
-#body-container {
-  width : 95%;
-}
+#body-container { width : 95%; }
 
 @media only <span class="highlight">screen</span> and (<span class="highlight">min-width</span>: 40em) {...}
 
@@ -100,9 +82,8 @@ body {
 
 @media only screen and (min-width: 82.6em) {...}
 
-@media only screen and (min-width: 115em) {...}
-			</code></pre>
-		<cite><a href="https://github.com/construct-framework/construct5/blob/master/css/grids/construct-responsive.css">github.com/construct-framework/construct5/blob/master/css/grids/construct-responsive.css</a></cite>
+@media only screen and (min-width: 115em) {...}</code></pre>
+		<cite class="fragment">Construct5: <a href="https://github.com/construct-framework/construct5/blob/master/css/grids/construct-responsive.css">construct-responsive.css</a></cite>
 	</section>
 
 	<section>
@@ -126,24 +107,26 @@ body {
 	</section>
 </section>
 
+<section>
 	<section>
-		<section>
 		<h2>Fluid Grid</a></h2>
+
 		<p class="fragment">
-			<q> They put control of our designs firmly <a href="http://www.alistapart.com/articles/dao/">in the hands of our users</a> and their browsing habits. They’ve also utterly failed to seize the imagination of web designers.</q>
-	<cite><a href="http://www.alistapart.com/articles/fluidgrids/">http://www.alistapart.com/articles/fluidgrids/</a></cite>
+			<q>Break out of our reliance on &quot;minimum screen resolution&quot; [and] put control of our designs firmly
+				<a href="http://www.alistapart.com/articles/dao/">in the hands of our users</a> and their browsing habits.</q>
+			<cite>Ethan Marcotte: <a href="http://www.alistapart.com/articles/fluidgrids/">Fluid Grids</a></cite>
 		</p>
-		</section>
-		<section>
-		<h2>target ÷ context = result</h2>
-		<pre><code contenteditable>.entry .main {
+	</section>
+	<section>
+	<h2>target ÷ context = result</h2>
+<pre><code contenteditable>.entry .main {
   float: left;
-  <span class="highlight">width: 82.938%</span>;          /* 700px / 844px = 0.82938 */
+  <span class="highlight">width: 82.938%</span>; /* 700px / 844px = 0.82938 */
 }
 
 .entry .meta {
   float: right;
-  <span class="highlight">width: 14.692%</span>;          /* 124px / 844px = 0.14692 */
+  <span class="highlight">width: 14.692%</span>; /* 124px / 844px = 0.14692 */
 }</code></pre>
 	</section>
 </section>
@@ -151,23 +134,22 @@ body {
 <section>
 	<section>
 		<h2>Flexible Images</h2>
-		<p class="fragment">
-			<q>working with non-fixed layouts can be more difficult once you introduce fixed-width elements (images) into them.</q>
-			<cite><a href="http://unstoppablerobotninja.com/entry/fluid-images/">http://unstoppablerobotninja.com/entry/fluid-images/</a></cite>
-		</p>
-</section>
-	<section>
-		<h2>Becoming responsive</h2>
+			<p class="fragment">
+				<q>working with non-fixed layouts can be more difficult once you introduce fixed-width elements (images) into them.</q>
+				<cite>Ethan Marcotte: <a href="http://unstoppablerobotninja.com/entry/fluid-images/">Fluid Images</a></cite>
+			</p>
+		</section>
+
+		<section>
+			<h2>Achieving Flexible Images</h2>
 <pre class="fragment"><code contenteditable>img,
 object {
-  max-width: 100%;
+max-width: 100%;
 }</code></pre>
-<aside class="fragment">Omit width and height attributes of the <code>&lt;img&gt;</code> tag.</aside>
-</section>
+			<aside class="fragment">Omit width and height attributes of <code>&lt;img&gt;</code> tag.</aside>
+	</section>
 
 </section>
-
-
 
 <section>
 	<h2>That's it...</h2>
@@ -175,75 +157,108 @@ object {
 	<p class="fragment">right?</p>
 </section>
 
-	<section>
-		<section>
-			<h2>Context</h2>
-
-			<p class="fragment">
-				<a href="https://twitter.com/lukew/statuses/161943568024469504"><img src="images/lukew-twitter.jpg" /></a>
-				<cite><a href="http://www.lukew.com/about">Luke Wroblewski</a></cite>
-			</p>
-		</section>
-		<section>
-			<h2>Context</h2>
-
-			<p class="fragment">
-				<q><a href="https://twitter.com/nternetinspired/status/219808473725145090">Content-first, mobile-first, user-first! win=win</a></q>
-				<cite><a href="http://internet-inspired.com/">Seth Warburton</a></cite>
-			</p>
-		</section>
-	</section>
-
 <section>
 	<section>
-	<h2>Approach</h2>
-	<p>More than one way of achieving responsiveness.</p>
+		<h2>Why RWD?</h2>
+		<p class="fragment">
+			<a href="https://twitter.com/lukew/statuses/161943568024469504"><img src="images/lukew-twitter.jpg" /></a>
+			<cite><a href="http://www.lukew.com/about">Luke Wroblewski</a></cite>
+		</p>
 	</section>
 	<section>
-		<h2>EMs For The Win!</h2>
+		<h2>In Other Words</h2>
+
+		<p class="fragment">
+			<q><a href="https://twitter.com/nternetinspired/status/219808473725145090">Content-first, mobile-first, user-first! win=win</a></q>
+			<cite><a href="http://internet-inspired.com/">Seth Warburton</a></cite>
+		</p>
+	</section>
+</section>
+
+<section>
+
+	<section>
+		<h2>Content First</h2>
+		<q class="fragment">A core tenet of Responsive Web Design (RWD) is fluidity and proportion</q>
+		<cite class="fragment"><a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">The EMs have it: Proportional Media Queries FTW!</a></cite>
+	</section>
+
+	<section>
+		<h2>Why Ems for Media Queries?</h2>
 		<ul>
-			<li class="fragment">Handle zooming better</li>
+			<li class="fragment">Handle zooming better (EMs scale)</li>
 			<li class="fragment">Force you to think about content versus device</li>
 		</ul>
-		<cite class="fragment"><a href="https://learn.extension.org/events/562">https://learn.extension.org/events/562</a></cite>
-		<pre class="fragment"><code>@media only screen and (min-width: <span class="highlight">50em</span> <del>600px</del>)  {...}</code></pre>
+		<cite class="fragment">Luke Wroblewski : <a href="https://learn.extension.org/events/562">Organizing Mobile Web Experiences</a></cite>
 	</section>
-<section>
-	<h2>Tiny screen first...</h2>
-	<p class="fragment">
-		Default code is for all devices, then progressively enhanced for larger screens and modern browsers that understand this enhancement.
-	</p>
-
-	<p class="fragment">
-	<q>[instead of] from the desktop down.	(Oh how we laughed when we realised our mistake.)</q>
-	<cite><a href="http://stuffandnonsense.co.uk/projects/320andup/">Andy Clarke</a></cite>
-	</p>
-</section>
-
-
 </section>
 
 <section>
-	<h2>More Reading</h2>
-	<ul>
-		<li><a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive Web Design - A List Apart May 25, 2010</a></li>
-		<li><a href="http://vimeo.com/34662135">A Dao of Flexibility - An Event Apart Nov 2, 2010<</a></li>
-	</ul>
+	<section>
+		<h2>Mobile	<small>(Tiny screen)</small>	first... </h2>
+		<p class="fragment">
+			<q>... [instead of] from the desktop down. (Oh how we laughed when we realised our mistake.)</q>
+			<cite>Andy Clarke: The new <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a></cite>
+		</p>
+	</section>
+
+	<section>
+		<h2>Mobile First</h2>
+
+		<p class="fragment">
+			Baseline CSS (design) is for all devices, then progressively enhanced for larger screens and modern browsers that understand this enhancement.
+		</p>
+		<pre class="fragment"><code contenteditable><span class="highlight">/* Default styles for small screens */</span>
+
+<span class="highlight">body { font-size : 76%; }</span>
+
+<span class="highlight">#body-container { width : 95%; }</span>
+
+@media only screen and (min-width: 40em) {...}
+
+@media only screen and (min-width: 50em) {...}
+
+@media only screen and (min-width: 64em) {...}
+
+@media only screen and (min-width: 82.6em) {...}
+
+@media only screen and (min-width: 115em) {...}</code></pre>
+	</section>
+</section>
+
+	<section>
+		<section>
+			<h2>User First</h2>
+			<p class="fragment">Websites are now created to convey messages and provide a gateway to interaction. The user experience, and maximizing accessibility must comes first to achieve this for all.</p>
+			<p class="fragment">Think <a href="http://accessites.org/site/2007/02/graceful-degradation-progressive-enhancement/">Progressive Enhancement &amp; Graceful Degradation</a></p>
+			<p class="fragment">Think <a href="http://www.w3.org/WAI/">Web Accessibility</a></p>
+		</section>
+</section>
+<section>
+<h2>More Reading</h2>
+<ul>
+<li>
+	<a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive Web Design - A List Apart May 25, 2010</a>
+</li>
+<li><a href="http://vimeo.com/34662135">A Dao of Flexibility - An Event Apart Nov 2, 2010</a></li>
+</ul>
 </section>
 
 <section>
-	<h1>THE END</h1>
+<h1>THE END</h1>
 
-	<h3>BY Hakim El Hattab / hakim.se</h3>
+	<img id="logo" class="clean" src="images/logo.png" />
+	<a rel="author" href="https://twitter.com/betweenbrain">Matt Thomas</a>
+	<cite><a href="http://betweenbrain.com/talks/achieving-responsiveness">betweenbrain.com/talks/achieving-responsiveness</a></cite>
 </section>
 </div>
 
 <!-- The navigational controls UI -->
 <aside class="controls">
-	<a class="left" href="#">&#x25C4;</a>
-	<a class="right" href="#">&#x25BA;</a>
-	<a class="up" href="#">&#x25B2;</a>
-	<a class="down" href="#">&#x25BC;</a>
+<a class="left" href="#">&#x25C4;</a>
+<a class="right" href="#">&#x25BA;</a>
+<a class="up" href="#">&#x25B2;</a>
+<a class="down" href="#">&#x25BC;</a>
 </aside>
 
 <!-- Presentation progress bar -->
@@ -256,36 +271,36 @@ object {
 
 <script>
 
-	// Full list of configuration options available here:	// https://github.com/hakimel/reveal.js#configuration
-	Reveal.initialize({
-		controls:true,
-		progress:true,
-		history :true,
+// Full list of configuration options available here:	// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls:true,
+progress:true,
+history :true,
 
-		transition  :Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+transition  :Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
 
-		// Optional libraries used to extend on reveal.js
-		dependencies:[
-			{ src:'lib/js/highlight.js', async:true, callback:function () {
-				window.hljs.initHighlightingOnLoad();
-			} },
-			{ src:'lib/js/classList.js', condition:function () {
-				return !document.body.classList;
-			} },
-			{ src:'lib/js/showdown.js', condition:function () {
-				return !!document.querySelector('[data-markdown]');
-			} },
-			{ src:'lib/js/data-markdown.js', condition:function () {
-				return !!document.querySelector('[data-markdown]');
-			} },
-			{ src:'socket.io/socket.io.js', async:true, condition:function () {
-				return window.location.host === 'localhost:1947';
-			} },
-			{ src:'plugin/speakernotes/client.js', async:true, condition:function () {
-				return window.location.host === 'localhost:1947';
-			} },
-		]
-	});
+// Optional libraries used to extend on reveal.js
+dependencies:[
+	{ src:'lib/js/highlight.js', async:true, callback:function () {
+		window.hljs.initHighlightingOnLoad();
+	} },
+	{ src:'lib/js/classList.js', condition:function () {
+		return !document.body.classList;
+	} },
+	{ src:'lib/js/showdown.js', condition:function () {
+		return !!document.querySelector('[data-markdown]');
+	} },
+	{ src:'lib/js/data-markdown.js', condition:function () {
+		return !!document.querySelector('[data-markdown]');
+	} },
+	{ src:'socket.io/socket.io.js', async:true, condition:function () {
+		return window.location.host === 'localhost:1947';
+	} },
+	{ src:'plugin/speakernotes/client.js', async:true, condition:function () {
+		return window.location.host === 'localhost:1947';
+	} },
+]
+});
 
 </script>
 
