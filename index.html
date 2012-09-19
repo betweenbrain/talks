@@ -69,21 +69,21 @@
 	<section>
 		<h2>For Example</h2>
 <article class="fragment">
-        <pre><code contenteditable>/* Default styles for small screens */
+<pre><code contenteditable>/* Default styles for small screens */
 
-        body { font-size : 76%; }
+body { font-size : 76%; }
 
-        #body-container { width : 95%; }
+#body-container { width : 95%; }
 
-        @media only <span class="highlight">screen</span> and (<span class="highlight">min-width</span>: 40em) {...}
+@media only <span class="highlight">screen</span> and (<span class="highlight">min-width</span>: 40em) {...}
 
-        @media only screen and (min-width: 50em) {...}
+@media only screen and (min-width: 50em) {...}
 
-        @media only screen and (min-width: 64em) {...}
+@media only screen and (min-width: 64em) {...}
 
-        @media only screen and (min-width: 82.6em) {...}
+@media only screen and (min-width: 82.6em) {...}
 
-        @media only screen and (min-width: 115em) {...}</code></pre>
+@media only screen and (min-width: 115em) {...}</code></pre>
         		<cite>Construct5: <a href="https://github.com/construct-framework/construct5/blob/master/css/grids/construct-responsive.css">construct-responsive.css</a></cite>
 </article>
 	</section>
@@ -101,7 +101,6 @@
             <li>speech</li>
             <li>tty</li>
             <li>tv</li>
-            </li>
         </ul>
     </section>
 
@@ -121,27 +120,27 @@
             <li>resolution</li>
             <li>scan</li>
             <li>grid</li>
-            </li>
         </ul>
     </section>
 </section>
 
-<section>
-	<section>
-		<h2>Fluid Grid</h2>
-
-		<p class="fragment">
-			<q>Break out of our reliance on &quot;minimum screen resolution&quot; [and] put control of our designs firmly
-				<a href="http://www.alistapart.com/articles/dao/">in the hands of our users</a> and their browsing habits.</q>
-			<cite>Ethan Marcotte: <a href="http://www.alistapart.com/articles/fluidgrids/">Fluid Grids</a></cite>
-		</p>
-	</section>
     <section>
-        <h2>Added Benefit</h2>
-        <p class="fragment">Help accommodate for what happens between &quot;break points&quot;, future proof your design.</p>
-    </section>
-	<section>
-	<h2>target ÷ context = result</h2>
+        <section>
+            <h2>Fluid Grid</h2>
+
+            <p class="fragment">
+                <q>Break out of our reliance on &quot;minimum screen resolution&quot; [and] put control of our designs firmly
+                    <a href="http://www.alistapart.com/articles/dao/">in the hands of our users</a> and their browsing habits.</q>
+                <cite>Ethan Marcotte: <a href="http://www.alistapart.com/articles/fluidgrids/">Fluid Grids</a></cite>
+            </p>
+        </section>
+        <section>
+            <h2>Added Benefit</h2>
+
+            <p class="fragment">Help accommodate for what happens between &quot;break points&quot;, future proof your design.</p>
+        </section>
+        <section>
+         <h2>target ÷ context = result</h2>
 <pre><code contenteditable>.entry .main {
   float: left;
   <span class="highlight">width: 82.938%</span>; /* 700px / 844px = 0.82938 */
@@ -151,17 +150,19 @@
   float: right;
   <span class="highlight">width: 14.692%</span>; /* 124px / 844px = 0.14692 */
 }</code></pre>
-	</section>
-</section>
+            </section>
+        </section>
 
-<section>
-	<section>
-		<h2>Flexible Images</h2>
-			<p class="fragment">
-				<q>working with non-fixed layouts can be more difficult once you introduce fixed-width elements (images) into them.</q>
-				<cite>Ethan Marcotte: <a href="http://unstoppablerobotninja.com/entry/fluid-images/">Fluid Images</a></cite>
-			</p>
-		</section>
+    <section>
+        <section>
+            <h2>Flexible Images</h2>
+
+            <p class="fragment">
+                <q>working with non-fixed layouts can be more difficult once you introduce fixed-width elements (images) into them.</q>
+                <cite>Ethan Marcotte:
+                    <a href="http://unstoppablerobotninja.com/entry/fluid-images/">Fluid Images</a></cite>
+            </p>
+        </section>
 
 		<section>
 			<h2>Achieving Flexibility</h2>
@@ -194,133 +195,173 @@
         <aside>And
             <a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">many, many more...</a>
         </aside>
+    </section>
+</section>
 
+    <section>
+        <h2>Approaching Responsiveness</h2>
+        <small>a.k.a. we have the ingredients, but how do we make the soup?</small>
+        <q class="fragment">Achieving responsiveness requires a mental shift, a different approach, a new way of thinking.</q>
+        <cite class="fragment">me</cite>
     </section>
 
-</section>
-
-<section>
-	<h2>Approaching Responsiveness</h2>
-    <small>a.k.a. we have the ingredients, but how do we make the soup?</small>
-	<q class="fragment">Achieving responsiveness requires a mental shift, a different approach, a new way of thinking.</q>
-    <cite class="fragment">me</cite>
-</section>
-
-<section>
-	<section>
-		<h2>Why RWD?</h2>
-		<p class="fragment">
-			<a href="https://twitter.com/lukew/statuses/161943568024469504"><img src="images/lukew-twitter.jpg" /></a>
-			<cite><a href="http://www.lukew.com/about">Luke Wroblewski</a></cite>
-		</p>
-	</section>
-	<section>
-		<h2>In Other Words</h2>
-
-		<p class="fragment">
-			<q><a href="https://twitter.com/nternetinspired/status/219808473725145090">Content-first, mobile-first, user-first! win=win</a></q>
-			<cite><a href="http://internet-inspired.com/">Seth Warburton</a></cite>
-		</p>
-	</section>
-</section>
-
-<section>
     <section>
-        <h2>Content First Design</h2>
+        <section>
+            <h2>Why RWD?</h2>
+
+            <p class="fragment">
+                <a href="https://twitter.com/lukew/statuses/161943568024469504"><img src="images/lukew-twitter.jpg" /></a>
+                <cite><a href="http://www.lukew.com/about">Luke Wroblewski</a></cite>
+            </p>
+        </section>
+        <section>
+            <h2>In Other Words</h2>
+
+            <p class="fragment">
+                <q><a href="https://twitter.com/nternetinspired/status/219808473725145090">Content-first, mobile-first, user-first! win=win</a></q>
+                <cite><a href="http://internet-inspired.com/">Seth Warburton</a></cite>
+            </p>
+        </section>
+    </section>
+
+    <section>
+        <h2>Content First: Design</h2>
+        <section>
+            <article class="fragment">
+                <q>A design that understands and supports content is always going to be better.</q>
+                <cite>Luke Wroblewski&apos;s notes on
+                    <a href="http://www.lukew.com/ff/entry.asp?1372">An Event Apart: Content First</a></cite>
+            </article>
+        </section>
+
+        <section>
+            <p class="fragment">Treat visual design as progressive enhancement of content.</p>
+            <ol>
+                <li class="fragment">Develop content and messaging.</li>
+                <li class="fragment">Implement unstyled, logically organized content.</li>
+                <li class="fragment">Deploy supporting features.</li>
+                <li class="fragment">Create and implement design to enhance the user experience.</li>
+            </ol>
+            <aside class="fragment">Matt Thomas:
+                <a href="http://prezi.com/d5l14glcmlmv/content-first-website-development/">Content First Website Development</a>
+            </aside>
+        </section>
+       </section>
+
+    <section>
+
+        <section>
+            <h2>Content First: Fluidity</h2>
+            <article class="fragment">
+                <q>A core tenet of Responsive Web Design (RWD) is fluidity and proportion</q>
+                <cite><a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">The EMs have it: Proportional Media Queries FTW!</a></cite>
+            </article>
+        </section>
+
+        <section>
+            <h2>Why Ems for Media Queries?</h2>
+            <article class="fragment">
+                <ul>
+                    <li>Handle zooming better (EMs scale)</li>
+                    <li>Force you to think about content versus device</li>
+                </ul>
+                <cite>Luke Wroblewski :
+                    <a href="https://learn.extension.org/events/562">Organizing Mobile Web Experiences</a></cite>
+            </article>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2>Mobile
+                <small>(Tiny screen)</small>
+                first...
+            </h2>
+            <p class="fragment">
+                <q>... [instead of] from the desktop down. (Oh how we laughed when we realised our mistake.)</q>
+                <cite>Andy Clarke: The new
+                    <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a></cite>
+            </p>
+        </section>
+
+        <section>
+            <h2>Mobile First CSS</h2>
+
+            <p class="fragment">
+                Baseline CSS (design) is for all devices, then progressively enhanced for larger screens and modern browsers that understand this enhancement.
+            </p>
+<pre class="fragment"><code contenteditable><span class="highlight">/* Default styles for small screens */</span>
+
+<span class="highlight">body { font-size : 76%; }</span>
+
+<span class="highlight">#body-container { width : 95%; }</span>
+
+@media only screen and (min-width: 40em) {...}
+
+@media only screen and (min-width: 50em) {...}
+
+@media only screen and (min-width: 64em) {...}
+
+@media only screen and (min-width: 82.6em) {...}
+
+@media only screen and (min-width: 115em) {...}</code></pre>
+   	</section>
+
+    <section>
+        <h2>Focus</h2>
+
         <article class="fragment">
-            <q>A design that understands and supports content is always going to be better.</q>
-            <cite>Luke Wroblewski&apos;s notes on
-                <a href="http://www.lukew.com/ff/entry.asp?1372">An Event Apart: Content First</a></cite>
+            <q>The constraints of the mobile medium force us to focus on what really matters</q>
+            <cite>Brad Frost:
+                <a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/">the many faces of &apos;mobile first&apos;</a></cite>
         </article>
     </section>
 
     <section>
-        <h2>Content First Design</h2>
-        <p class="fragment">Treat visual design as progressive enhancement of content.</p>
-        <aside class="fragment"><a href="http://prezi.com/d5l14glcmlmv/content-first-website-development/">Content First Website Development</a></aside>
+        <h2>80% Less</h2>
+
+        <article class="fragment">
+            <q>When you design for mobile first... 80% of the content, navigation, promotions, and interactions needs to go. And that's... great.</q>
+            <cite>Luke Wroblewski :
+                <a href="http://www.lukew.com/ff/entry.asp?1117">Mobile First Helps with Big Issues</a></cite>
+        </article>
+    </section>
+</section>
+
+    <section>
+        <h2>User First</h2>
+
+        <p class="fragment">Websites are created to convey messages and provide a gateway to interaction. The user experience, and maximizing accessibility, must comes first to achieve this.</p>
+
+        <p class="fragment">Think
+            <a href="http://accessites.org/site/2007/02/graceful-degradation-progressive-enhancement/">Progressive Enhancement &amp; Graceful Degradation</a>
+        </p>
+
+        <p class="fragment">Think <a href="http://www.w3.org/WAI/">Web Accessibility</a></p>
     </section>
 
-
-	<section>
-		<h2>Fluid Content</h2>
-        <article class="fragment">
-		<q>A core tenet of Responsive Web Design (RWD) is fluidity and proportion</q>
-		<cite ><a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">The EMs have it: Proportional Media Queries FTW!</a></cite>
-            </article>
-	</section>
-
-	<section>
-		<h2>Why Ems for Media Queries?</h2>
-        <article class="fragment">
-		<ul>
-			<li>Handle zooming better (EMs scale)</li>
-			<li>Force you to think about content versus device</li>
-		</ul>
-		<cite>Luke Wroblewski : <a href="https://learn.extension.org/events/562">Organizing Mobile Web Experiences</a></cite>
-            </article>
-	</section>
-</section>
-
-<section>
-	<section>
-		<h2>Mobile	<small>(Tiny screen)</small>	first... </h2>
-		<p class="fragment">
-			<q>... [instead of] from the desktop down. (Oh how we laughed when we realised our mistake.)</q>
-			<cite>Andy Clarke: The new <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a></cite>
-		</p>
-	</section>
-
     <section>
-   		<h2>Mobile First CSS</h2>
-
-   		<p class="fragment">
-   			Baseline CSS (design) is for all devices, then progressively enhanced for larger screens and modern browsers that understand this enhancement.
-   		</p>
-   		<pre class="fragment"><code contenteditable><span class="highlight">/* Default styles for small screens */</span>
-
-   <span class="highlight">body { font-size : 76%; }</span>
-
-   <span class="highlight">#body-container { width : 95%; }</span>
-
-   @media only screen and (min-width: 40em) {...}
-
-   @media only screen and (min-width: 50em) {...}
-
-   @media only screen and (min-width: 64em) {...}
-
-   @media only screen and (min-width: 82.6em) {...}
-
-   @media only screen and (min-width: 115em) {...}</code></pre>
-   	</section>
-
-    <section>
-   		<h2>Focus</h2>
-
-   		<article class="fragment">
-   			<q>The constraints of the mobile medium force us to focus on what really matters</q>
-               <cite>Brad Frost: <a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/">the many faces of &apos;mobile first&apos;</a></cite>
-   		</article>
+        <h2>Epitome</h2>
+        <section>
+            <p class="fragment">RWD is more than using media queries, fluid grids, and flexible images.</p>
         </section>
-
-    <section>
-   		<h2>80% Less</h2>
-
-   		<article class="fragment">
-   			<q>When you design for mobile first... 80% of the content, navigation, promotions, and interactions needs to go. And that's... great.</q>
-               <cite>Luke Wroblewski : <a href="http://www.lukew.com/ff/entry.asp?1117">Mobile First Helps with Big Issues</a></cite>
-   		</article>
+        <section>
+            <article class="fragment">
+                <p>Achieving responsiveness involves:</p>
+                <ul>
+                    <li>Approach content before design.</li>
+                    <li>Use visual design as enhancement.</li>
+                    <li>Develop for mobile first.</li>
+                    <li>Progressively enhance with media queries.</li>
+                    <li>Maximize user experience and accessibility.</li>
+                </ul>
+            </article>
         </section>
+        <section>
+            <p class="fragment">Do everything you can to put the user in control of their experience.</p>
+        </section>
+    </section>
 
-</section>
-
-	<section>
-		<section>
-			<h2>User First</h2>
-			<p class="fragment">Websites are created to convey messages and provide a gateway to interaction. The user experience, and maximizing accessibility, must comes first to achieve this.</p>
-			<p class="fragment">Think <a href="http://accessites.org/site/2007/02/graceful-degradation-progressive-enhancement/">Progressive Enhancement &amp; Graceful Degradation</a></p>
-			<p class="fragment">Think <a href="http://www.w3.org/WAI/">Web Accessibility</a></p>
-		</section>
-</section>
     <section>
         <h2>More Reading</h2>
         <ul>
@@ -330,7 +371,9 @@
             <li>
                 <a href="http://vimeo.com/34662135">A Dao of Flexibility - An Event Apart Nov 2, 2010</a>
             </li>
-            <li><a href="http://www.zeldman.com/2012/02/07/fluid-grids-orientation-resolution-independence/">Fluid grids, orientation & resolution independence</a></li>
+            <li>
+                <a href="http://www.zeldman.com/2012/02/07/fluid-grids-orientation-resolution-independence/">Fluid grids, orientation & resolution independence</a>
+            </li>
             <li>
                 <a href="http://www.alistapart.com/articles/responsive-images-how-they-almost-worked-and-what-we-need/">Responsive Images: How they Almost Worked and What We Need</a>
             </li>
@@ -340,12 +383,14 @@
             <li>
                 <a href="http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/">mobile-first responsive web design</a>
             </li>
-            <li><a href="http://www.netmagazine.com/opinions/nielsen-vs-clark-theyre-both-wrong">Nielsen vs Clark - they're both wrong</a></li>
+            <li>
+                <a href="http://www.netmagazine.com/opinions/nielsen-vs-clark-theyre-both-wrong">Nielsen vs Clark - they're both wrong</a>
+            </li>
             <li>
                 <a href="http://www.netmagazine.com/features/case-responsive-web-content-its-all-about-users">The case for responsive web content: it's all about the users</a>
             </li>
             <li>
-                Jason Mark: <a href="http://www.joomladaynewengland.org/images/howtogreatmobilesite.01.js.pdf">How to make a great mobile site</a>
+                <a href="http://www.joomladaynewengland.org/images/howtogreatmobilesite.01.js.pdf">How to make a great mobile site</a>
             </li>
         </ul>
     </section>
