@@ -38,6 +38,10 @@ body {
 	background       : radial-gradient(center, ellipse cover, rgba(85, 90, 95, 1) 0%, rgba(28, 30, 32, 1) 100%);
 }
 
+.clear{
+	clear: both;
+}
+
 cite {
 	display: block;
 	margin: 1em 0;
