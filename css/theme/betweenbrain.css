@@ -42,6 +42,10 @@ a[rel="author"]{
 	display: block;
 }
 
+.block{
+	display: block;
+}
+
 .clear{
 	clear: both;
 }
