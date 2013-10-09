@@ -4,16 +4,16 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>The Joomla! Ajax INterface</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A discussion of the Joomla Ajax Interface: its origin and usage.">
+		<meta name="author" content="Matt Thomas">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -32,43 +32,48 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Joomla! Ajax Interface</h1>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>By <a href="http://betweenbrain.com">Matt Thomas</a> (a.k.a <a href="http://twitter.com/betweenbrain">betweenbrain</a>)</small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
+					<h2>Now in core (yay!)</h2>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+						Included in Joomla 3.2 core distribution
+					</p>
+					<p>
+						Joomla 1.5 and 2.5 versions available <a href="https://github.com/betweenbrain-llc/Joomla-Ajax-Interface">https://github.com/betweenbrain-llc/Joomla-Ajax-Interface</a>
 					</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>Ajax Defined</h2>
+						<p>A group of web technologies to send and retrieve data from a server asynchronously (in the background) without interfering with the page.</p>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+						<pre><code data-trim contenteditable>
+(function ($) {
+    $.ajax({
+        type   : 'POST',
+        data   : {
+            'option' : 'com_ajax',
+            'module' : 'cart',
+            'cmd'    : 'checkout',
+            'format' : 'json'
+        },
+        dataType: 'json',
+        success: function (json) {
+            console.log(json.response)
+        }
+    });
+})(jQuery)
+						</code></pre>
 					</section>
 					<section>
 						<h2>Basement Level 2</h2>
