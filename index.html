@@ -59,23 +59,20 @@
 				<section>
 					<section>
 						<h2>AJAX Defined</h2>
-						<p>A group of web technologies to send and retrieve data from a server asynchronously (in the background) without interfering with the page.</p>
+						<p>A group of web technologies to send and retrieve data from a server asynchronously without interfering with the page.</p>
 					</section>
 					<section>
 						<h2>AJAX (jQuery)</h2>
 						<pre><code data-trim contenteditable>
 (function ($) {
     $.ajax({
-        type   : 'POST',
         data   : {
             'option' : 'com_ajax',
-            'module' : 'session',
-            'cmd'    : 'debug',
+            'plugin' : 'latestarticles',
             'format' : 'json'
         },
-        dataType: 'json',
-        success: function (json) {
-            console.log(json.response)
+        success: function (response) {
+            console.log(response)
         }
     });
 })(jQuery)
@@ -86,18 +83,14 @@
 				<section>
 					<section>
 						<h2>The Challenge</h2>
+						<p>A Joomla request must always be a component, can never be a module or plugin.</p>
 					</section>
 					<section>
 						<h2>Joomla Request</h2>
 						<pre><code data-trim contenteditable>
-index.php?option=com_ajax&module=session&cmd=debug&format=json
+index.php?option=com_ajax&plugin=latestarticles&format=json
 						</code></pre>
 					</section>
-					<section>
-						<h2>The Limitation</h2>
-						<p>A Joomla request must always be a component, can never be a module or plugin.</p>
-					</section>
-
 					<section>
 						<h2>The Solution</h2>
 						<p>Make requests to modules and plugins via a component.</p>
@@ -106,25 +99,34 @@ index.php?option=com_ajax&module=session&cmd=debug&format=json
 
 				<section>
 					<section>
-						<h2>Making an Ajax Request</h2>
+						<h2>Anatomy of an Ajax Request</h2>
 					</section>
 					<section>
 						<h2>Required</h2>
-						<p>Call the component.</p>
+						<p>Call the component</p>
 						<code>
 							<pre>option=com_ajax</pre>
 						</code>
-						<p>Designate the target.</p>
+						<p>Designate the target</p>
 						<code>
 							<pre>[module|plugin]=name</pre>
 						</code>
 						<small>(e.g. module=session for mod_session)</small>
+						<p>Response format</p>
+						<code>
+							<pre>format=[json|debug|raw]</pre>
+						</code>
 					</section>
 
 					<section>
 						<h2>Module Variable</h2>
+						<!--
+						<pre><code data-trim contenteditable>
+index.php?option=com_ajax&module=session&format=json
+						</code></pre>
+						-->
 						<code>
-							<pre>$module     = $input->get('module');</pre>
+							<pre>$module     = $input->get('module');            [e.g. module=session]</pre>
 						</code>
 						<p>Path of helper file</p>
 						<code>
@@ -148,14 +150,10 @@ index.php?option=com_ajax&module=session&cmd=debug&format=json
 					<section>
 						<h2>Optional</h2>
 						<p>Alternate module method prefix.</p>
-						<code>
+						<code >
 							<pre>method=[custom fragment]</pre>
 						</code>
-						<small>(defaults to 'get' if omitted, suffix always 'Ajax')</small>
-						<p>Designate response format.</p>
-						<code>
-							<pre>format=[json|debug|raw]</pre>
-						</code>
+						<small>(defaults to 'get', suffix always 'Ajax', e.g. 'getAjax')</small>
 					</section>
 					<section>
 						<h2>Additional Data</h2>
@@ -176,7 +174,12 @@ index.php?option=com_ajax&module=session&cmd=debug&format=json
 					<p>
 						<small><a href="http://betweenbrain.com">Matt Thomas</a> (a.k.a <a href="http://twitter.com/betweenbrain">betweenbrain</a>)</small>
 					</p>
-					<a href="https://github.com/betweenbrain-llc/Joomla-Ajax-Interface">https://github.com/betweenbrain-llc/Joomla-Ajax-Interface</a>
+					<p>
+						<a href="http://betweenbrain.com/talks/ajax-interface/">http://betweenbrain.com/talks/ajax-interface/</a>
+					</p>
+					<p>
+					<a href="https://github.com/Joomla-Ajax-Interface">https://github.com/Joomla-Ajax-Interface</a>
+				</p>
 				</section>
 			</div>
 
