@@ -134,38 +134,31 @@
 					</section>
 
 					<section>
-						<pre><code>
-├── modules
-├── modules
-	├── Ajax-Session-Module.zip
-	├── helper.php
-	├── language
-	│   └── en-GB
-	│       ├── en-GB.mod_session.ini
-	│       └── en-GB.mod_session.sys.ini
-	├── mod_session.php
-	├── mod_session.xml
-	├── README.md
-	└── tmpl
-	    └── default.php
+						<h2 contenteditable>module=session</h2>
+
+						<h3>File Structure</h3>
+						<pre><code data-trim>
+└── modules
+  └── mod_session
+    ├── helper.php
+    ├── mod_session.php
+    ├── mod_session.xml
+    └── tmpl
+      └── default.php
 						</code></pre>
 
-					</section>
-
-					<section>
-						<h2>Module Exmaple</h2>
-						<code contenteditable><pre>
-						?option=com_ajax&module=session&format=json</pre></code>
+<h3>helper.php</h3>
 						<pre><code data-trim contenteditable>
 &lt;?php defined('_JEXEC') or die;
 
 class modSessionHelper {
 
 	public static function getAjax() {
-		...
+
 	}
 }
-						</code> </pre>
+						</code></pre>
+
 					</section>
 
 					<section>
