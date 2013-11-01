@@ -134,8 +134,19 @@
 					</section>
 
 					<section>
-						<h2 contenteditable>module=session</h2>
+						<h2>Optional</h2>
+						<p>Alternate module method prefix.</p>
+						<code >
+							<pre>method=[custom fragment]</pre>
+						</code>
+						<small>(defaults to 'get', suffix always 'Ajax', e.g. 'getAjax')</small>
+					</section>
 
+					<section>
+						<h2 contenteditable>&module=session</h2>
+						<!--
+						<code contenteditable><pre>?option=com_ajax&module=session&format=json</pre></code>
+						-->
 						<h3>File Structure</h3>
 						<pre><code data-trim>
 └── modules
@@ -146,7 +157,6 @@
     └── tmpl
       └── default.php
 						</code></pre>
-
 <h3>helper.php</h3>
 						<pre><code data-trim contenteditable>
 &lt;?php defined('_JEXEC') or die;
@@ -158,7 +168,6 @@ class modSessionHelper {
 	}
 }
 						</code></pre>
-
 					</section>
 
 					<section>
@@ -171,14 +180,35 @@ class modSessionHelper {
 							<pre>$response   = $dispatcher->trigger('onAjax' . $plugin);</pre>
 						</code>
 					</section>
+
 					<section>
-						<h2>Optional</h2>
-						<p>Alternate module method prefix.</p>
-						<code >
-							<pre>method=[custom fragment]</pre>
-						</code>
-						<small>(defaults to 'get', suffix always 'Ajax', e.g. 'getAjax')</small>
+						<h2 contenteditable>&plugin=latestarticles</h2>
+						<!--
+						<code contenteditable><pre>?option=com_ajax&plugin=latestarticles&format=json</pre></code>
+						-->
+						<h3>File Structure</h3>
+						<pre><code data-trim>
+└── plugins
+  └── ajax
+    └── latestarticles
+	 ├── latestarticles.php
+	 └── latestarticles.xml
+</code></pre>
+<h3>latestarticles.php</h3>
+<pre><code data-trim contenteditable>
+&lt;?php defined('_JEXEC') or die;
+
+class plgAjaxLatestarticles extends JPlugin {
+
+	function onAjaxLatestarticles() {
+
+	}
+}
+						</code></pre>
 					</section>
+
+
+
 					<section>
 						<h2>Additional Data</h2>
 						<p>Include anything else your plugin or module needs.</p>
