@@ -92,7 +92,7 @@
 					<section>
 						<h2>Ajax Request</h2>
 						<pre><code data-trim contenteditable>
-index.php?option=com_ajax&plugin=latestarticles&format=json
+?option=com_ajax&plugin=latestarticles&format=json
 						</code></pre>
 					</section>
 				</section>
@@ -120,11 +120,6 @@ index.php?option=com_ajax&plugin=latestarticles&format=json
 
 					<section>
 						<h2>Module Variable</h2>
-						<!--
-						<pre><code data-trim contenteditable>
-index.php?option=com_ajax&module=session&format=json
-						</code></pre>
-						-->
 						<code>
 							<pre>$module     = $input->get('module');            [e.g. module=session]</pre>
 						</code>
@@ -137,6 +132,42 @@ index.php?option=com_ajax&module=session&format=json
 							<pre>$class      = 'mod' . ucfirst($module) . 'Helper';</pre>
 						</code>
 					</section>
+
+					<section>
+						<pre><code>
+├── modules
+├── modules
+	├── Ajax-Session-Module.zip
+	├── helper.php
+	├── language
+	│   └── en-GB
+	│       ├── en-GB.mod_session.ini
+	│       └── en-GB.mod_session.sys.ini
+	├── mod_session.php
+	├── mod_session.xml
+	├── README.md
+	└── tmpl
+	    └── default.php
+						</code></pre>
+
+					</section>
+
+					<section>
+						<h2>Module Exmaple</h2>
+						<code contenteditable><pre>
+						?option=com_ajax&module=session&format=json</pre></code>
+						<pre><code data-trim contenteditable>
+&lt;?php defined('_JEXEC') or die;
+
+class modSessionHelper {
+
+	public static function getAjax() {
+		...
+	}
+}
+						</code> </pre>
+					</section>
+
 					<section>
 						<h2>Plugin Variable</h2>
 						<code>
