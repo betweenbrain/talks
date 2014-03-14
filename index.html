@@ -84,6 +84,10 @@
 								<p>Resolves limitation of requests to modules and plugins.</p>
 							</section>
 							<section>
+								<h2>AJAX in 30 Seconds <small>(or less)</small></h2>
+								<p>A group of web technologies to send and retrieve data from a server asynchronously without interfering with the page.</p>
+							</section>
+							<section>
 								<h2>The Challenge</h2>
 								<p>In Joomla, a request must always be a component, can never be a module or plugin.</p>
 								<small>(think menu items)</small>
@@ -122,10 +126,7 @@
 							</section>
 
 							<section>
-								<h2>Module Variable</h2>
-								<code>
-									<pre>$module     = $input->get('module');            [e.g. module=session]</pre>
-								</code>
+								<h2>Module URL Parameter</h2>
 								<p>Path of helper file</p>
 								<code>
 									<pre>$helperFile = JPATH_BASE . '/modules/mod_' . $module . '/helper.php';</pre>
@@ -176,11 +177,8 @@
 							</section>
 
 							<section>
-								<h2>Plugin Variable</h2>
-								<code>
-									<pre>$plugin     = ucfirst($input->get('plugin'));</pre>
-								</code>
-								<p>Triggered plugin event</p>
+								<h2>Plugin URL Parameter</h2>
+								<p>Plugin event to trigger</p>
 								<code>
 									<pre>$response   = $dispatcher->trigger('onAjax' . $plugin);</pre>
 								</code>
