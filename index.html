@@ -83,14 +83,14 @@
 								<p>Inspired by a client, fostered by community.</p>
 								<p>Resolves limitation of requests to modules and plugins.</p>
 							</section>
+                            <section>
+                                <h2>The Challenge</h2>
+                                <p>In Joomla, a request must always be a component, can never be a module or plugin.</p>
+                                <small>(think menu items)</small>
+                            </section>
 							<section>
 								<h2>AJAX in 30 Seconds <small>(or less)</small></h2>
 								<p>A group of web technologies to send and retrieve data from a server asynchronously without interfering with the page.</p>
-							</section>
-							<section>
-								<h2>The Challenge</h2>
-								<p>In Joomla, a request must always be a component, can never be a module or plugin.</p>
-								<small>(think menu items)</small>
 							</section>
 							<section>
 								<h2>The Solution</h2>
@@ -166,10 +166,10 @@
         &lt;?php defined('_JEXEC') or die;
 
     class modSessionHelper {
-    
+
         public static function getAjax()
         {
-    
+
             return 'Hello Ajax World';
         }
     }
