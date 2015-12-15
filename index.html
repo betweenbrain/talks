@@ -54,8 +54,7 @@
 			</section>
 			<section>
 				<h1>Github</h1>
-				<p>
-					GitHub is a Web-based Git repository hosting service. GitHub provides a Web-based graphical interface as well as access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+				<p>GitHub is a Web-based Git repository hosting service. GitHub provides a Web-based graphical interface as well as access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 				</p>
 				<p><a href="https://en.wikipedia.org/wiki/GitHub">https://en.wikipedia.org/wiki/GitHub</a></p>
 			</section>
@@ -63,7 +62,9 @@
 		<section>
 			<h1>Subversion</h1>
 			<p>A centralized revision control system started in 2000 as an effort to write an open-source version-control system which operated much like CVS, while fixing bugs and adding features missing in CVS.</p>
-			<p><a href="https://en.wikipedia.org/wiki/Apache_Subversion">https://en.wikipedia.org/wiki/Apache_Subversion</a></p>
+			<p>
+				<a href="https://en.wikipedia.org/wiki/Apache_Subversion">https://en.wikipedia.org/wiki/Apache_Subversion</a>
+			</p>
 		</section>
 		<section>
 			<h1>Git features</h1>
@@ -76,8 +77,10 @@
 					</ul>
 				</li>
 				<li>Fast!</li>
-				<li>Smart <small>tendency for fewer merge conflicts</small></li>
-				<li>Small footprint</li>
+				<li>Smart
+					<small>tendency for fewer merge conflicts</small>
+				</li>
+				<li><a href="https://help.github.com/articles/what-are-the-differences-between-svn-and-git/#directory-structure">Small footprint</a></li>
 			</ul>
 		</section>
 		<section>
@@ -92,8 +95,27 @@
 				</li>
 				<li>Slow, especially initial checkouts</li>
 				<li>Renames problematic</li>
-				<li>Large footprint <small>stores additional copies of data locally</small></li>
+				<li>Large footprint
+					<small>stores additional copies of data locally</small>
+				</li>
 			</ul>
+		</section>
+		<section>
+			<section>
+				<h1>Github</h1>
+				<h2>Supercharging Git</h2>
+				<small>(Yes, things like this exist for SVN.)</small>
+			</section>
+			<section>
+				<h1>GitHub Flow</h1>
+				<ol>
+					<li>Create a topic branch from the latest <em>master</em> branch</li>
+					<li>Make commits in the topic branch until you're ready to merge it</li>
+					<li>Make a <em><a href="https://help.github.com/articles/using-pull-requests/">pull request</a></em> to pull the topic branch into the master branch; <em><a href="https://help.github.com/articles/using-pull-requests/#pull-request-discussion">discuss the changes</a></em>, make more commits, etc. until the team is ready to merge it</li>
+					<li>Merge the pull request and deploy</li>
+					</li>
+				</ol>
+			</section>
 		</section>
 		<section>
 			<h1>Origins of Git</h1>
